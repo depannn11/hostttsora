@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soraa Host</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ad Popup -->
+    <div class="ad-overlay" id="adOverlay">
+        <div class="ad-popup">
+            <button class="ad-close" id="adClose">&times;</button>
+            <div class="ad-content">
+                <!-- Foto/Image Section -->
+                <div class="ad-image-container">
+                    <img src="https://h.uguu.se/LEFdtfkw.jpg" 
+                         alt="Advertisement" class="ad-image">
+                    <div class="ad-text">
+                        <h3>Visit Our Telegram Bot</h3>
+                        <p>Mau deploy tapi gatau kemana? langsung aja ke soraa cweb, untuk user free sudah mendapatkan free deploy 5×!!!</p>
+                    </div>
+                </div>
+                
+                <!-- Telegram Button -->
+                <div class="telegram-button-container">
+                    <a href="https://t.me/cwebdepanbot" target="_blank" class="telegram-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.98-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.06-.2-.07-.06-.17-.04-.24-.02-.1.02-1.79 1.14-5.06 3.34-.48.33-.91.5-1.3.49-.43-.01-1.27-.25-1.89-.46-.76-.26-1.37-.4-1.32-.84.03-.24.37-.48 1.02-.74 3.9-1.66 6.51-2.76 7.83-3.29 3.92-1.61 4.73-1.89 5.26-1.9.12 0 .38.03.55.18.14.13.18.3.2.42.02.12.02.31.01.45z"/>
+                        </svg>
+                        Visit Telegram Bot
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                    <polyline points="13 2 13 9 20 9"></polyline>
+                </svg>
+                <h1>Soraa Host</h1>
+            </div>
+            <p class="tagline">Fast, secure, and simple file hosting</p>
+            
+            <!-- Telegram Button in Header -->
+            <div class="header-telegram">
+                <a href="https://t.me/cwebdepanbot" target="_blank" class="telegram-header-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.98-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.06-.2-.07-.06-.17-.04-.24-.02-.1.02-1.79 1.14-5.06 3.34-.48.33-.91.5-1.3.49-.43-.01-1.27-.25-1.89-.46-.76-.26-1.37-.4-1.32-.84.03-.24.37-.48 1.02-.74 3.9-1.66 6.51-2.76 7.83-3.29 3.92-1.61 4.73-1.89 5.26-1.9.12 0 .38.03.55.18.14.13.18.3.2.42.02.12.02.31.01.45z"/>
+                    </svg>
+                    Telegram Bot
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <div class="upload-card">
+                <div class="drop-zone" id="dropZone">
+                    <div class="upload-icon-wrapper">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h2>Drag & Drop Files Here</h2>
+                    <p class="subtitle">or click to browse from your device</p>
+                    <p class="file-info">Supports all file types • Max 100GB per file</p>
+                    <input type="file" id="fileInput" multiple hidden>
+                </div>
+
+                <div class="divider">
+                    <span>OPTIONS</span>
+                </div>
+
+                <div class="options-grid">
+                    <label class="option-card">
+                        <input type="checkbox" id="shortUrl">
+                        <div class="option-content">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                            <div>
+                                <h3>Short URL</h3>
+                                <p>Generate compact links</p>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="option-card">
+                        <input type="checkbox" id="anonymousUpload" checked>
+                        <div class="option-content">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <div>
+                                <h3>Anonymous</h3>
+                                <p>Upload without account</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <button class="upload-btn" id="uploadBtn" disabled>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Upload Files</span>
+                </button>
+            </div>
+
+            <div class="results" id="results"></div>
+        </main>
+
+        <footer>
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Forever Storage</h3>
+                    <p>Files stored permanently</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3>Secure & Private</h3>
+                    <p>End-to-end encryption</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M2 12h20"></path>
+                        </svg>
+                    </div>
+                    <h3>100% Free</h3>
+                    <p>No premium required</p>
+                </div>
+            </div>
+            
+            <!-- Telegram Button in Footer -->
+            <div class="footer-telegram">
+                <a href="https://t.me/cwebdepanbot" target="_blank" class="telegram-footer-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.98-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.06-.2-.07-.06-.17-.04-.24-.02-.1.02-1.79 1.14-5.06 3.34-.48.33-.91.5-1.3.49-.43-.01-1.27-.25-1.89-.46-.76-.26-1.37-.4-1.32-.84.03-.24.37-.48 1.02-.74 3.9-1.66 6.51-2.76 7.83-3.29 3.92-1.61 4.73-1.89 5.26-1.9.12 0 .38.03.55.18.14.13.18.3.2.42.02.12.02.31.01.45z"/>
+                    </svg>
+                    Connect with us on Telegram
+                </a>
+            </div>
+            
+            <div class="footer-text">
+                <p>&copy; 2025 Soraa Host. Made with ❤️</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
